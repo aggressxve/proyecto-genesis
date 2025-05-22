@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="navbar"></div>
+<div class="container mt-5">
+    <div class="row">
+        <!-- Product Images -->
+        <div class="col-md-6 mb-4">
+            <img src="img/img2.jpg" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">            
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <h2 class="mb-3">Álbum BTS BE</h2>
+            <p class="text-muted mb-4">SKU: WH192387</p>
+            <div class="mb-3">
+                <span class="h4 me-2">$40.00</span>
+                <span class="text-muted"><s>$35.00</s></span>
+            </div>
+            <div class="mb-3">
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-fill text-warning"></i>
+                <i class="bi bi-star-half text-warning"></i>
+                <span class="ms-2">4.9 (290 reviews)</span>
+            </div>
+            <p class="mb-4">BE es el quinto álbum de estudio de BTS, lanzado el 20 de noviembre de 2020. Este disco fue creado en respuesta a la pandemia de COVID-19, reflejando los pensamientos y emociones del grupo durante ese período.</p>
+            <div class="mb-4">
+            </div>
+            <div class="mb-4">
+                <label for="quantity" class="form-label">Cantidad:</label>
+                <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
+            </div>
+            <a href="carrito2.html">
+                <button class="btn btn-primary btn-lg mb-3 me-2">
+                    <i class="bi bi-cart-plus"></i> Añadir al carrito
+                </button>
+            </a>
+            <div class="mt-4">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+<script>
+    function changeImage(event, src) {
+            document.getElementById('mainImage').src = src;
+            document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+</script>
+<script src="scripts/navbar.js"></script>
+<script src="scripts/footer.js"></script>
+</body>
+</html>
